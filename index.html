@@ -23,6 +23,8 @@ color:white;
 overflow-x:hidden;
 }
 
+/* Navbar */
+
 nav{
 position:fixed;
 top:0;
@@ -60,6 +62,8 @@ nav a:hover{
 color:#60a5fa;
 }
 
+/* Hero */
+
 .hero{
 min-height:100vh;
 display:flex;
@@ -82,7 +86,7 @@ flex:1;
 }
 
 .hero-text h1{
-font-size:5rem;
+font-size:4.5rem;
 line-height:1.1;
 margin-bottom:15px;
 }
@@ -92,7 +96,7 @@ color:#60a5fa;
 }
 
 .hero-text h3{
-font-size:2rem;
+font-size:1.8rem;
 color:#93c5fd;
 margin-bottom:20px;
 }
@@ -127,26 +131,30 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:14px 30px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+    cursor:pointer;
+    min-width:300px;
+    color:#ffffff !important;
 }
 
 .primary{
-background:#60a5fa;
-color:white;
+    background:#60a5fa;
+    color:#ffffff !important;
 }
 
-.secondary{
-border:2px solid #60a5fa;
-color:#60a5fa;
+.resume-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
-
-.btn:hover{
-transform:translateY(-5px);
-}
+/* Sections */
 
 section{
 padding:100px 10%;
@@ -167,11 +175,15 @@ border-radius:20px;
 padding:35px;
 }
 
+/* About */
+
 .about{
 text-align:center;
-line-height:2;
 font-size:18px;
+line-height:2;
 }
+
+/* Skills */
 
 .skills{
 display:grid;
@@ -192,6 +204,8 @@ transition:.3s;
 background:#60a5fa;
 transform:translateY(-8px);
 }
+
+/* Projects */
 
 .projects{
 display:grid;
@@ -215,40 +229,16 @@ color:#60a5fa;
 margin-bottom:15px;
 }
 
-.resume-box{
+/* Contact */
+
+.contact-box{
 text-align:center;
+line-height:2.2;
 }
 
-.resume-box p{
-margin-bottom:15px;
-line-height:1.8;
-}
-
-.contact-form{
-max-width:700px;
-margin:auto;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:none;
-border-radius:10px;
-background:rgba(255,255,255,.1);
-color:white;
-}
-
-.contact-form button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-background:#60a5fa;
-color:white;
-font-size:18px;
-cursor:pointer;
+.contact-box a{
+color:#60a5fa;
+text-decoration:none;
 }
 
 footer{
@@ -256,6 +246,8 @@ text-align:center;
 padding:30px;
 background:rgba(255,255,255,.05);
 }
+
+/* Mobile */
 
 @media(max-width:900px){
 
@@ -273,6 +265,10 @@ width:250px;
 height:250px;
 }
 
+.buttons{
+justify-content:center;
+}
+
 nav{
 flex-direction:column;
 gap:15px;
@@ -280,9 +276,7 @@ gap:15px;
 
 nav ul{
 gap:15px;
-}
-
-.buttons{
+flex-wrap:wrap;
 justify-content:center;
 }
 }
@@ -310,16 +304,20 @@ justify-content:center;
 <div class="hero-content">
 
 <div class="hero-text">
+
 <h1>Hi, I'm <span>Karthick S N</span></h1>
 
-<h3>UI/UX Designer & Web Developer</h3>
+<h3>Computer Science Student | Web Developer | UI/UX Designer</h3>
 
 <p>
-Computer Science Engineering student passionate about Web Development,
-UI/UX Design, Java, Python, Databases and modern technologies.
+Motivated and detail-oriented Computer Science Engineering student
+with strong knowledge in programming, web development, databases,
+and problem solving. Passionate about building real-world applications
+and continuously improving technical skills.
 </p>
 
 <div class="buttons">
+
 <a href="resume.pdf" class="btn primary" download>
 📄 Download Resume
 </a>
@@ -327,12 +325,13 @@ UI/UX Design, Java, Python, Databases and modern technologies.
 <a href="#contact" class="btn secondary">
 📧 Contact Me
 </a>
+
 </div>
 
 </div>
 
 <div class="hero-image">
-<img src="karthick.jpeg" alt="Karthick">
+<img src="karthick.jpeg" alt="Karthick S N">
 </div>
 
 </div>
@@ -340,15 +339,20 @@ UI/UX Design, Java, Python, Databases and modern technologies.
 </section>
 
 <section id="about">
+
 <h2 class="section-title">About Me</h2>
 
 <div class="glass about">
+
 <p>
-Motivated Computer Science Engineering student with strong knowledge in programming,
-web development, databases and problem solving. Passionate about building
-real-world applications and continuously improving technical skills.
+I am a Computer Science Engineering student passionate about software
+development, web technologies, UI/UX design and database systems.
+I enjoy solving problems, learning new technologies and building
+projects that create real-world impact.
 </p>
+
 </div>
+
 </section>
 
 <section id="skills">
@@ -382,17 +386,23 @@ real-world applications and continuously improving technical skills.
 
 <div class="project-card">
 <h3>Voice Assistant for Farmers</h3>
-<p>Tamil voice-enabled assistant helping farmers interact using speech commands.</p>
+<p>
+Tamil voice-enabled assistant helping farmers access agricultural information through speech interaction.
+</p>
 </div>
 
 <div class="project-card">
 <h3>College Event Registration System</h3>
-<p>Online registration platform with event management and database integration.</p>
+<p>
+Online event registration platform with participant management and database integration.
+</p>
 </div>
 
 <div class="project-card">
 <h3>Food Ordering System</h3>
-<p>Food ordering application with cart management and backend database support.</p>
+<p>
+Food ordering application with menu management, ordering process and backend database support.
+</p>
 </div>
 
 </div>
@@ -403,16 +413,20 @@ real-world applications and continuously improving technical skills.
 
 <h2 class="section-title">Resume</h2>
 
-<div class="glass resume-box">
+<div class="glass contact-box">
 
-<p><strong>Education:</strong> B.E. Computer Science Engineering (2023-2027)</p>
+<p><strong>Education:</strong> B.E. Computer Science Engineering (2023 - 2027)</p>
 
 <p><strong>Languages:</strong> English, Tamil, Kannada</p>
 
-<p><strong>Strengths:</strong> Problem Solving, Team Collaboration, Quick Learning, Communication Skills</p>
+<p><strong>Location:</strong> Bengaluru, Karnataka, India</p>
 
-<a href="resume.pdf" class="btn primary" download>
-📄 Download Full Resume
+<p><strong>Strengths:</strong> Problem Solving, Team Collaboration, Communication Skills, Quick Learner, Adaptability</p>
+
+<br>
+
+<a href="resume.pdf" class="btn primary resume-btn" download>
+    Download Resume
 </a>
 
 </div>
@@ -423,15 +437,38 @@ real-world applications and continuously improving technical skills.
 
 <h2 class="section-title">Contact Me</h2>
 
-<div class="contact-form">
+<div class="glass contact-box">
 
-<input type="text" placeholder="Your Name">
+<h3 style="color:#60a5fa;">Let's Connect</h3>
 
-<input type="email" placeholder="Your Email">
+<br>
 
-<textarea rows="5" placeholder="Your Message"></textarea>
+<p>📧 Email: amskarthicksn@gmail.com</p>
 
-<button>Send Message</button>
+<p>📱 Phone: +91 9345503732</p>
+
+<p>📍 Bengaluru, Karnataka, India</p>
+
+<p>
+💼 LinkedIn:
+<a href="https://linkedin.com/in/karthick-sn-158b3a2bb" target="_blank">
+linkedin.com/in/karthick-sn-158b3a2bb
+</a>
+</p>
+
+<p>
+💻 GitHub:
+<a href="https://github.com/karthick-sn" target="_blank">
+github.com/karthick-sn
+</a>
+</p>
+
+<br>
+
+<a href="resume.pdf" class="btn primary resume-btn" download>
+Download Resume
+</a>
+</a>
 
 </div>
 
