@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karthick Portfolio</title>
+<title>Karthick S N | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -23,8 +23,6 @@ color:white;
 overflow-x:hidden;
 }
 
-/* Navbar */
-
 nav{
 position:fixed;
 top:0;
@@ -33,14 +31,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
+background:rgba(15,23,42,.85);
 backdrop-filter:blur(15px);
-background:rgba(255,255,255,0.05);
 z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
+font-size:30px;
+font-weight:800;
 color:#60a5fa;
 }
 
@@ -61,63 +60,93 @@ nav a:hover{
 color:#60a5fa;
 }
 
-/* Hero */
-
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
+padding:120px 10% 50px;
 }
 
 .hero-content{
-max-width:800px;
-animation:fadeIn 1.2s ease;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:80px;
+max-width:1200px;
+width:100%;
 }
 
-.hero img{
-width:180px;
-height:180px;
-border-radius:50%;
-border:5px solid rgba(255,255,255,0.3);
-margin-bottom:20px;
-object-fit:cover;
+.hero-text{
+flex:1;
 }
 
-.hero h1{
-font-size:4rem;
-margin-bottom:10px;
+.hero-text h1{
+font-size:5rem;
+line-height:1.1;
+margin-bottom:15px;
 }
 
-.hero span{
+.hero-text span{
 color:#60a5fa;
 }
 
-.hero p{
+.hero-text h3{
+font-size:2rem;
+color:#93c5fd;
+margin-bottom:20px;
+}
+
+.hero-text p{
 font-size:18px;
+line-height:1.8;
 opacity:.9;
-margin:20px 0;
+}
+
+.hero-image{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-image img{
+width:380px;
+height:380px;
+border-radius:50%;
+object-fit:cover;
+object-position:center top;
+border:6px solid #60a5fa;
+box-shadow:0 0 50px rgba(96,165,250,.5);
+}
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:14px 32px;
-background:#60a5fa;
-color:white;
+padding:14px 30px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
 transition:.3s;
 }
 
-.btn:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 30px rgba(96,165,250,.5);
+.primary{
+background:#60a5fa;
+color:white;
 }
 
-/* Sections */
+.secondary{
+border:2px solid #60a5fa;
+color:#60a5fa;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
 
 section{
 padding:100px 10%;
@@ -125,51 +154,44 @@ padding:100px 10%;
 
 .section-title{
 text-align:center;
-font-size:2.5rem;
+font-size:2.8rem;
 margin-bottom:50px;
 color:#60a5fa;
 }
 
-/* Glass Cards */
-
 .glass{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,.08);
 backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,.1);
 border-radius:20px;
-padding:30px;
+padding:35px;
 }
-
-/* About */
 
 .about{
 text-align:center;
-line-height:1.8;
+line-height:2;
 font-size:18px;
 }
 
-/* Skills */
-
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 }
 
 .skill{
-padding:20px;
-text-align:center;
-border-radius:15px;
 background:rgba(255,255,255,.08);
+padding:20px;
+border-radius:15px;
+text-align:center;
+font-weight:600;
 transition:.3s;
 }
 
 .skill:hover{
-transform:translateY(-8px);
 background:#60a5fa;
+transform:translateY(-8px);
 }
-
-/* Projects */
 
 .projects{
 display:grid;
@@ -181,20 +203,26 @@ gap:25px;
 background:rgba(255,255,255,.08);
 padding:25px;
 border-radius:20px;
-transition:.4s;
+transition:.3s;
 }
 
 .project-card:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .project-card h3{
 color:#60a5fa;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
-/* Contact */
+.resume-box{
+text-align:center;
+}
+
+.resume-box p{
+margin-bottom:15px;
+line-height:1.8;
+}
 
 .contact-form{
 max-width:700px;
@@ -207,7 +235,6 @@ width:100%;
 padding:15px;
 margin-bottom:15px;
 border:none;
-outline:none;
 border-radius:10px;
 background:rgba(255,255,255,.1);
 color:white;
@@ -216,43 +243,34 @@ color:white;
 .contact-form button{
 width:100%;
 padding:15px;
-background:#60a5fa;
 border:none;
 border-radius:10px;
+background:#60a5fa;
 color:white;
 font-size:18px;
 cursor:pointer;
 }
 
-.contact-form button:hover{
-background:#3b82f6;
-}
-
-/* Footer */
-
 footer{
 text-align:center;
-padding:25px;
+padding:30px;
 background:rgba(255,255,255,.05);
 }
 
-/* Animation */
+@media(max-width:900px){
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.hero-content{
+flex-direction:column-reverse;
+text-align:center;
 }
 
-@media(max-width:768px){
+.hero-text h1{
+font-size:3rem;
+}
 
-.hero h1{
-font-size:2.5rem;
+.hero-image img{
+width:250px;
+height:250px;
 }
 
 nav{
@@ -263,6 +281,10 @@ gap:15px;
 nav ul{
 gap:15px;
 }
+
+.buttons{
+justify-content:center;
+}
 }
 
 </style>
@@ -271,13 +293,14 @@ gap:15px;
 <body>
 
 <nav>
-<div class="logo">Portfolio</div>
+<div class="logo">Karthick</div>
 
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#resume">Resume</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -286,53 +309,66 @@ gap:15px;
 
 <div class="hero-content">
 
-<img src="https://via.placeholder.com/180" alt="Profile">
+<div class="hero-text">
+<h1>Hi, I'm <span>Karthick S N</span></h1>
 
-<h1>Hi, I'm <span>Karthick</span></h1>
+<h3>UI/UX Designer & Web Developer</h3>
 
 <p>
-Computer Science Student | Web Developer | UI/UX Designer
-Passionate about creating beautiful and responsive web applications.
+Computer Science Engineering student passionate about Web Development,
+UI/UX Design, Java, Python, Databases and modern technologies.
 </p>
 
-<a href="#" class="btn">Download Resume</a>
+<div class="buttons">
+<a href="resume.pdf" class="btn primary" download>
+📄 Download Resume
+</a>
+
+<a href="#contact" class="btn secondary">
+📧 Contact Me
+</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="karthick.jpeg" alt="Karthick">
+</div>
 
 </div>
 
 </section>
 
 <section id="about">
-
 <h2 class="section-title">About Me</h2>
 
 <div class="glass about">
-
 <p>
-I am a Computer Science student with expertise in HTML, CSS,
-JavaScript, PHP, MySQL and Python. I enjoy designing modern
-user interfaces and building real-world software solutions.
-My goal is to become a full-stack developer and contribute
-to innovative technology projects.
+Motivated Computer Science Engineering student with strong knowledge in programming,
+web development, databases and problem solving. Passionate about building
+real-world applications and continuously improving technical skills.
 </p>
-
 </div>
-
 </section>
 
 <section id="skills">
 
-<h2 class="section-title">Skills</h2>
+<h2 class="section-title">Technical Skills</h2>
 
 <div class="skills">
 
+<div class="skill">Java</div>
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
 <div class="skill">HTML5</div>
 <div class="skill">CSS3</div>
 <div class="skill">JavaScript</div>
-<div class="skill">PHP</div>
 <div class="skill">MySQL</div>
-<div class="skill">Python</div>
+<div class="skill">MongoDB</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">VS Code</div>
 <div class="skill">Figma</div>
-<div class="skill">UI/UX Design</div>
 
 </div>
 
@@ -346,24 +382,38 @@ to innovative technology projects.
 
 <div class="project-card">
 <h3>Voice Assistant for Farmers</h3>
-<p>
-Tamil voice-enabled web application that provides agricultural information and support to farmers.
-</p>
+<p>Tamil voice-enabled assistant helping farmers interact using speech commands.</p>
 </div>
 
 <div class="project-card">
-<h3>Student Management System</h3>
-<p>
-Web-based application using PHP and MySQL for managing student records efficiently.
-</p>
+<h3>College Event Registration System</h3>
+<p>Online registration platform with event management and database integration.</p>
 </div>
 
 <div class="project-card">
-<h3>Personal Portfolio Website</h3>
-<p>
-Responsive portfolio showcasing skills, projects, resume and contact details.
-</p>
+<h3>Food Ordering System</h3>
+<p>Food ordering application with cart management and backend database support.</p>
 </div>
+
+</div>
+
+</section>
+
+<section id="resume">
+
+<h2 class="section-title">Resume</h2>
+
+<div class="glass resume-box">
+
+<p><strong>Education:</strong> B.E. Computer Science Engineering (2023-2027)</p>
+
+<p><strong>Languages:</strong> English, Tamil, Kannada</p>
+
+<p><strong>Strengths:</strong> Problem Solving, Team Collaboration, Quick Learning, Communication Skills</p>
+
+<a href="resume.pdf" class="btn primary" download>
+📄 Download Full Resume
+</a>
 
 </div>
 
@@ -388,7 +438,7 @@ Responsive portfolio showcasing skills, projects, resume and contact details.
 </section>
 
 <footer>
-<p>© 2026 Karthick S N | Designed with ❤️</p>
+<p>© 2026 Karthick S N | Portfolio Website</p>
 </footer>
 
 </body>
